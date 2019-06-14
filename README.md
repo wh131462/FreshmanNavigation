@@ -1,2 +1,3 @@
 # FreshmanNavigation
-A Freshman's navigation.
+
+2019级广西科技大学易班新生导航
