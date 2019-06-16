@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+    <style type="text/css">
+        body{
+			margin: 0;
+			
+			background: rgba(0,30,255,0.1);;
+		}
+		.top{
+			height: 30px;
+			background: rgba(0,150,255,0.3);
+		}
+		.top a{
+			float: right;
+			height: 40px;
+			padding: 0 15px;
+			background: rgba(255,165,0,1);
+			color: rgba(123,104,238,1);
+			font-size: 20px;
+			text-shadow: #007BFF 2px 1px 1px;
+			text-decoration: none;
+			margin: 0 5px;
+			line-height: 30px;
+			border:rgba(255,235,205,0.3) solid 1px;
+			border-radius:2px 2px 20px 20px;
+		}
+		.main{
+			text-align: center;
+			width: 60%;
+			min-width: 560px;
+			height:720px;
+			margin: 0 auto;
+			background: rgba(0,30,255,0.1);
+		}
+		.main h1{
+			margin: 0;
+			padding: 10px;
+			color: rgba(0,30,255,0.3);
+		}
+		.foot{
+			height: 40px;
+			width: 100%;
+			text-align:center;
+			position: fixed;
+			color: rgba(0,150,255,0.6);
+			bottom: 0;
+		}
+    </style>
+    <title>招新信息收集</title>
+	<!-- 引入pure -->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-CCTZv2q9I9m3UOxRLaJneXrrqKwUNOzZ6NGEUMwHtShDJ+nCoiXJCAgi05KfkLGY" crossorigin="anonymous">
+</head>
+<body>
+<div class="top">
+	<a href="">首 页</a>
+	<a href="">关于我们</a>
+</div>
+<div class="main">
+	<h1>易班招新信息收集</h1>
+	<form action="php/submite.php" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
+		<fieldset>
+			<div class="pure-control-group">
+				<label for="name">姓名:</label>
+				<input type="text" name="name" value="" />
+			</div>
+			<div class="pure-control-group">
+				<span>性别:</span>
+				<lable for="male"  class="pure-radio"><input type="radio" name="sex"  checked value="Male"/>男</label>
+				<lable for="female"  class="pure-radio"><input type="radio" name="sex" id="female" value="Female"/>女</label>
+			</div>
+			<div class="pure-control-group">
+				<label for="school">学院:<input type="text" name="school" value="" /></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="studyId">学号:<input type="number" name="studyId" value="" /></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="QQ">QQ:<input type="number" name="QQ" value="" /></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="tel">手机号:<input type="number" name="tel" value="" /></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="username">易班用户名:<input type="text" name="username" value="" /></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="last">以前在学校曾担任:<textarea class="pure-input-1-2" name="last"></textarea></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="interest">兴趣爱好:<textarea class="pure-input-1-2" name="interest"></textarea></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="skills">特长:<textarea class="pure-input-1-2" name="skills"></textarea></label>
+			</div>
+			<div class="pure-control-group">
+			<label for="perCom">个人简介与自我评价:<textarea class="pure-input-1-2" name="perCom"></textarea></label>
+			</div>
+			<div class="pure-control-group">
+				<label for="future">如果你成功加入易班工作站，请问你打算如何达成自我实现:<textarea class="pure-input-1-2" name="future"></textarea></label>
+			</div>
+			<div class="pure-control-group">
+			<span>选择你想加入的部门：</span>
+			<span>1.</span>
+			<select name="group1">
+				<option value="秘书处">秘书处</option>
+				<option value="传媒部">传媒部</option>
+				<option value="技术部">技术部</option>
+				<option value="宣传部">宣传部</option>
+				<option value="策划部">策划部</option>
+				<option value="运营部">运营部</option>
+			</select>
+			<span>2.</span>
+			<select name="group2">
+				<option value="秘书处">秘书处</option>
+				<option value="传媒部">传媒部</option>
+				<option value="技术部">技术部</option>
+				<option value="宣传部">宣传部</option>
+				<option value="策划部">策划部</option>
+				<option value="运营部">运营部</option>
+			</select>
+			</div>
+			<div class="pure-control-group">
+			<span>是否愿意服从调剂:</span>
+			<lable for="yes" class="pure-radio"><input type="radio" name="yes" checked value="yes"/>是</label>
+			<lable for="no" class="pure-radio"><input type="radio" name="no" value="no"/>否</label>
+			</div>
+			<div class="pure-control-group">
+				<span>请上传本人一寸照:</span>
+			<input type="file" name="pho" value="pho"/><br>
+			</div>
+			<div class="pure-controls">
+				<button type="submit" class="pure-button pure-button-primary">提交</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
+<div class="foot">
+	<small>
+		<p>Copyright &copy; 2019 GXUST-YiBanTechGroup |All Rights Reserved|<a href="mailto:TechGroup@gxust-yiban.com?Subject=subinfo&body=hello" style="color: rgba(0,150,255,0.6);text-decoration:none; ">联系我们</a></p>
+	</small>
+</div>
+</body>
+</html>
