@@ -9,9 +9,20 @@
 		margin:0;
 	}
 	.returnInfo{
+		text-align: center;
 		width: 60%;
 		margin: 0 auto;
 		border: #007BFF solid 1px;
+		border-radius: 5px;
+	}
+	a{
+		text-decoration: none;
+		color: #007BFF;
+	}
+	a:hover{
+		color: #FFFFFF;
+		background: #007BFF;
+		border: #0062CC solid 1px;
 		border-radius: 5px;
 	}
 </style>
@@ -66,7 +77,7 @@ if($err==""){
 $sql="INSERT INTO memInfo(name,sex,school,studyId,QQ,tel,username,last,interest,skills,perCom,selfAchieve,group1,group2,yorn,pho) VALUES ('$name','$sex','$school','$studyId','$QQ','$tel','$username','$last','$interest','$skills','$perCom','$selfAchieve','$group1','$group2','$yorn','$pho')";
 
 	if($conn->query($sql)==true){
-		echo " 信息上传成功~";
+		echo " 信息上传成功~<a href='../index.html'>点此返回首页</a>";
 	}else{
 		echo " 数据传入数据库失败";
 	}

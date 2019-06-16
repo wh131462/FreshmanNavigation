@@ -16,7 +16,7 @@
 		die("连接失败".$conn->connect_error);
 	}
 	echo "<script>console.log('Connect complete.')</script>";
-
+/*
 //创建数据库
 $userSql="CREATE DATABASE admin default character set utf8";
 if($conn->query($userSql)==TRUE){
@@ -46,9 +46,9 @@ yorn VARCHAR(10) NOT NULL,
 pho TEXT NOT NULL,
 sub_date TIMESTAMP
 )";
-
+*/
 $conn->query("use admin;");
-
+/*
 //判断表是否建立
 if($conn->query($tbSql)===TRUE){
 	echo '<script>console.log("Table has been created.")</script>';
@@ -56,7 +56,7 @@ if($conn->query($tbSql)===TRUE){
 	echo '<script>console.log("error:"'.$conn->error.')</script>';
 }
 // 已创建则注释掉此部分
-
+*/
 function close(){
 	global $conn;
 	$conn->close();

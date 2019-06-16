@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		 <title>招新信息收集</title>
+		<link rel="shortcut icon" href="images/logo.ico">
 
         <style type="text/css">
             body {
@@ -18,26 +20,29 @@
 
             .top a {
                 float: right;
-                height: 40px;
+                height: 28px;
+				line-height: 28px;
                 padding: 0 15px;
-                background: rgba(255, 165, 0, 1);
+                 font-size: 18px;
                 color: rgba(123, 104, 238, 1);
-                font-size: 20px;
+               
                 text-shadow: #007BFF 2px 1px 1px;
                 text-decoration: none;
                 margin: 0 5px;
-                line-height: 30px;
-                border: rgba(255, 235, 205, 0.3) solid 1px;
-                border-radius: 2px 2px 20px 20px;
+               
+				background: rgba(25, 165, 250, 0.8);
+                border: rgba(25, 235, 205, 0.3) solid 1px;
+                border-radius: 2px;
             }
 
             .main {
                 text-align: center;
                 width: 60%;
                 min-width: 560px;
-                height: 720px;
+                height:auto;
                 margin: 0 auto;
                 background: rgba(0, 30, 255, 0.1);
+				margin-bottom: 30px;
             }
 
             .main h1 {
@@ -50,12 +55,11 @@
                 height: 40px;
                 width: 100%;
                 text-align: center;
-                position: fixed;
+                position: relative;
                 color: rgba(0, 150, 255, 0.6);
                 bottom: 0;
             }
         </style>
-        <title>招新信息收集</title>
         <!-- 引入pure -->
         <link rel="stylesheet" href="css/pure-min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,8 +67,8 @@
     <body>
         <!-- 导航栏 -->
         <div class="top">
+			<a href="">关于我们</a>
             <a href="">首 页</a>
-            <a href="">关于我们</a>
         </div>
         
         <div class="main">
@@ -77,42 +81,40 @@
                     </div>
                     <div class="pure-control-group">
                         <span>性别:</span>
-                        <label for="male" class="pure-radio">
+                        <label for="sex" class="pure-radio">
                             <input type="radio" name="sex" checked value="Male" />男
-                        </label>
-                        <label for="female" class="pure-radio">
-                            <input type="radio" name="sex" id="female" value="Female" />女
+							<input type="radio" name="sex" value="Female" />女
                         </label>
                     </div>
                     <div class="pure-control-group">
-                        <label for="school">学院:<input type="text" name="school" value="" /></label>
+                        <label for="school">学院:</label><input type="text" name="school" value="" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="studyId">学号:<input type="number" name="studyId" value="" /></label>
+                        <label for="studyId">学号:</label><input type="number" name="studyId" value="" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="QQ">QQ:<input type="number" name="QQ" value="" /></label>
+                        <label for="QQ">QQ:</label><input type="number" name="QQ" value="" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="tel">手机号:<input type="number" name="tel" value="" /></label>
+                        <label for="tel">手机号:</label><input type="number" name="tel" value="" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="username">易班用户名:<input type="text" name="username" value="" /></label>
+                        <label for="username">易班用户名:</label><input type="text" name="username" value="" />
                     </div>
                     <div class="pure-control-group">
-                        <label for="last">以前在学校曾担任:<textarea class="pure-input-1-2" name="last"></textarea></label>
+                        <label for="last">以前在学校曾担任:</label><textarea class="pure-input-1-2" name="last"></textarea>
                     </div>
                     <div class="pure-control-group">
-                        <label for="interest">兴趣爱好:<textarea class="pure-input-1-2" name="interest"></textarea></label>
+                        <label for="interest">兴趣爱好:</label><textarea class="pure-input-1-2" name="interest"></textarea>
                     </div>
                     <div class="pure-control-group">
-                        <label for="skills">特长:<textarea class="pure-input-1-2" name="skills"></textarea></label>
+                        <label for="skills">特长:</label><textarea class="pure-input-1-2" name="skills"></textarea>
                     </div>
                     <div class="pure-control-group">
-                        <label for="perCom">个人简介与自我评价:<textarea class="pure-input-1-2" name="perCom"></textarea></label>
+                        <label for="perCom">个人简介与自我评价:</label><textarea class="pure-input-1-2" name="perCom"></textarea>
                     </div>
                     <div class="pure-control-group">
-                        <label for="future">如果你成功加入易班工作站，请问你打算如何达成自我实现:<textarea class="pure-input-1-2" name="future"></textarea></label>
+                        <label for="future">如果你成功加入易班工作站，请问你打算如何达成自我实现:</label><textarea class="pure-input-1-2" name="future"></textarea>
                     </div>
                     <div class="pure-control-group">
                         <span>选择你想加入的部门：</span>
@@ -137,8 +139,10 @@
                     </div>
                     <div class="pure-control-group">
                         <span>是否愿意服从调剂:</span>
-                        <lable for="yes" class="pure-radio"><input type="radio" name="yes" checked value="yes" />是</label>
-                            <lable for="no" class="pure-radio"><input type="radio" name="no" value="no" />否</label>
+                       <label for="yorn" class="pure-radio">
+                           <input type="radio" name="yorn" checked value="yes" />是
+						   <input type="radio" name="yorn" id="female" value="no" />否
+                       </label>
                     </div>
                     <div class="pure-control-group">
                         <span>请上传本人一寸照:</span>
