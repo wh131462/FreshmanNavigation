@@ -1,6 +1,46 @@
 /**
  * CSS Document  
  */
-body{
-	margin: 0;
-}
+	body{
+		margin: 0;
+	}
+	.top{
+		margin-top: 30px;
+		right: 30px;
+		transform: skew(-30deg);
+		z-index: 999;/*浮动在最上层*/
+		position: absolute;
+
+	}
+	.top>ul>li{
+		display: inline;
+		color: #662299;
+		border: #666666 solid 1px;
+		transform: skew(-30deg);
+		padding: 10px 20px;
+		line-height: 40px;
+	}
+	.top>ul>li>a{transform: skew(-30deg);
+		text-decoration: none;	
+	}
+	.top li:hover{
+		background: #155A8B;
+		color: #669955;
+	}
+	.top>ul>li>ul{
+		overflow: hidden;
+		width: 30px;
+	}
+	.banner{
+		width: 100%;
+		height: 720px;
+		background: #06655F;
+	}
+	.foot {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	color: rgba(0, 150, 255, 0.6);
+	bottom: 0;
+	}
