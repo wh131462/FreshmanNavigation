@@ -16,25 +16,30 @@
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body data-spy="scroll" data-target="#myScroll" style="height: 2480px;">
-
+<body data-spy="scroll" data-target="#myScroll">
 <!-- 导航栏 -->
 <div class="top">
 	<ul>
 		<li>
 		<a href="#">首页</a>
 		</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">新生引导</a>
-			<ul class="dropdown-menu">
-				<li><a href="#">link</a></li>
-			</ul>
+		<li>
+			<a href="#" onclick="openlist()">新生引导</a>
 		</li>
+		
+	</ul>
+	<ul id="secondList"  onmouseleave="closelist()">
+		<li><a href="#">link</a></li>
 	</ul>
 </div>
 																
 <!-- Banner -->
-<div class="banner"></div>
+<div class="banner">
+	<div class="video">
+		<iframe src="//player.bilibili.com/player.html?aid=57614439&cid=100566928&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" id="video"> </iframe>
+	</div>
+	
+</div>
 
 <!-- 测试 -->
 <div class="container-fluid">
