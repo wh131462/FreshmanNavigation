@@ -11,6 +11,8 @@ window.onload=autoHeight;
 function autoHeight(){
 	var Height=window.innerHeight;
 	var banner=document.getElementsByClassName("banner")[0];
+	var affix=document.getElementById("affix");/*顺便设置附加导航栏的顶部偏移量*/
+	affix.setAttribute("data-offset-top",Height+30);
 	banner.style.height=Height+"px";
-	console.log("success");
+	console.log("Autoheight success");
 }
