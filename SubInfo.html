@@ -10,29 +10,31 @@
         <style type="text/css">
             body {
                 margin: 0;
-                background: rgba(0, 30, 255, 0.1);
             }
-
+			
+			#bg{
+				width: 100%;
+				z-index: -1;
+				position:relative;
+			}
             .top {
                 height: 30px;
-                background: rgba(0, 150, 255, 0.3);
+				position: absolute;
+				top: 0;
+				right: 0;
             }
 
             .top a {
-                float: right;
+				float: right;
                 height: 28px;
 				line-height: 28px;
-                padding: 0 15px;
-                 font-size: 18px;
-                color: rgba(123, 104, 238, 1);
-               
-                text-shadow: #007BFF 2px 1px 1px;
+                padding: 0 20px;
+                font-size: 30px;
+				font-weight: bolder;
+                color:#268e8f;
+				margin: 20px 15px 0px 0;
+                text-shadow: #268e8f 1px 1px 1px;
                 text-decoration: none;
-                margin: 0 5px;
-               
-				background: rgba(25, 165, 250, 0.8);
-                border: rgba(25, 235, 205, 0.3) solid 1px;
-                border-radius: 2px;
             }
 
             .main {
@@ -40,9 +42,9 @@
                 width: 60%;
                 min-width: 560px;
                 height:auto;
-                margin: 0 auto;
-                background: rgba(0, 30, 255, 0.1);
-				margin-bottom: 30px;
+				margin-top: 300px;
+                margin: 0px auto;
+				position:relative;
             }
 
             .main h1 {
@@ -51,20 +53,13 @@
                 color: rgba(0, 30, 255, 0.3);
             }
 
-            .foot {
-                height: 40px;
-                width: 100%;
-                text-align: center;
-                position: relative;
-                color: rgba(0, 150, 255, 0.6);
-                bottom: 0;
-            }
         </style>
         <!-- 引入pure -->
         <link rel="stylesheet" href="css/pure-min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+		<img src="images/baomingtop.png" id="bg">
         <!-- 导航栏 -->
         <div class="top">
 			<a href="">关于我们</a>
@@ -72,7 +67,6 @@
         </div>
         
         <div class="main">
-            <h1>易班招新报名表</h1>
             <form action="php/submite.php" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
@@ -149,16 +143,17 @@
                         <input type="file" name="pho" value="pho" /><br>
                     </div>
                     <div class="pure-controls">
-                        <button type="submit" class="pure-button pure-button-primary">提交</button>
+                        <button type="submit" class="pure-button pure-button-primary" style="margin-right: 70px;">提交</button>
                     </div>
                 </fieldset>
             </form>
         </div>
-        <div class="foot">
+        <!-- <div class="foot">
             <small>
                 <p>Copyright &copy; 2019 GXUST-YiBanTechGroup |All Rights Reserved|<a href="mailto:TechGroup@gxust-yiban.com?Subject=subinfo&body=hello"
                         style="color: rgba(0,150,255,0.6);text-decoration:none; ">联系我们</a></p>
             </small>
-        </div>
+        </div> -->
+		<img src="images/baomingbottom.png" id="bg">
     </body>
 </html>
