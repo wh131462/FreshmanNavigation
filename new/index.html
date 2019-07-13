@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>科大小易-新生导航</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
+ 
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+ 
+
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
+<style>
+.banner img {width: 100%;}
+</style>
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript">
+var myScroll;
+function loaded(){
+	myScroll = new iScroll('wrapper', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false,
+		onScrollEnd: function () {
+			document.querySelector('#indicator > li.active').className = '';
+			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+		}
+	});
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+</head>
+
+<body>
+<div class="banner">
+
+	<div id="wrapper">
+		<div id="scroller">
+			<ul id="thelist">
+				<li><p>一番桃李花开尽，惟有青青草色齐</p><a href="javascript:void(0)"><img src="images/3.jpg" /></a></li>
+				<li><p>生命，在于运动</p><a href="javascript:void(0)"><img src="images/4.jpg" /></a></li>
+				<li><p>天空没有翅膀的痕迹，而我已飞过</p><a href="javascript:void(0)"><img src="images/2.jpg" /></a></li>
+				<li><p>夜幕笼罩，月明如镜</p><a href="javascript:void(0)"><img src="images/1.jpg" /></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav">
+		<ul id="indicator">
+			<li class="active" ></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+</div>
+
+<ul class="mainmenu">
+   <li><a href="http://www.yiban.cn/forum/article/show/channel_id/30297/puid/5000115/group_id/0/article_id/45189302" ><b><img src="images/tb01.png" /></b><span>柳州简介</span></a></li>
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45188270/channel_id/30297/puid/5000115" ><b><img src="images/tb02.png" /></b><span>科大简介</span></a></li>
+ <li><a href="http://www.yiban.cn/forum/article/show/article_id/44846926/channel_id/30297/puid/5000115" ><b><img src="images/tb12.png" /></b><span>学院简介</span></a></li>
+   <li><a href="http://www.yiban.cn/forum/article/show/channel_id/30297/puid/5000115/article_id/24599869/group_id/0" ><b><img src="images/tb03.png" /></b><span>易班简介</span></a></li>
+		<li><a href="http://www.yiban.cn/forum/article/show/article_id/45187600/channel_id/30297/puid/5000115" ><b><img src="images/tb04.png" /></b><span>生活攻略</span></a></li>
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45190574/channel_id/30297/puid/5000115" ><b><img src="images/tb05.png" /></b><span>旅游攻略</span></a></li>
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45175346/channel_id/30297/puid/5000115/group_id/0" ><b><img src="images/tb06.png" /></b><span>军训攻略</span></a></li>
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45188208/channel_id/30297/puid/5000115/group_id/0" ><b><img src="images/tb07.png" /></b><span>出行交通</span></a></li> 
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45187418/channel_id/30297/puid/5000115/group_id/0" ><b><img src="images/tb10.png" /></b><span>加入易班</span></a></li>
+  <li><a href="http://www.yiban.cn/forum/article/show/article_id/45157772/channel_id/30297/puid/5000115" ><b><img src="images/tb11.png" /></b><span>社团简介</span></a></li>
+<li><a href="https://720yun.com/t/3d2jOrkwOk8?scene_id=4253306" ><b><img src="images/tb13.png" /></b><span>科大全景图</span></a></li>
+<li><a href="../images/广科大-东环校区.png" ><b><img src="images/tb08.png" /></b><span>科大平面图</span></a></li>
+</ul>
+
+
+<script type="text/javascript">
+var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+
+var count2 = document.getElementsByClassName("menuimg").length;
+for(i=0;i<count;i++){
+	document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+}
+document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+setInterval(function(){
+	myScroll.scrollToPage('next', 0,400,count);
+},3500 );
+
+window.onresize = function(){ 
+	for(i=0;i<count;i++){
+		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+	}
+	document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+} 
+</script>
+
+<div class="foot">
+			<small>
+				<p>Copyright &copy; 2019 GXUST-YiBanTechGroup |All Rights Reserved|<a href="mailto:TechGroup@gxust-yiban.com?Subject=subinfo&body=hello"
+					 style="color: rgba(0,150,255,0.6);text-decoration:none; ">联系我们</a></p>
+			</small>
+		</div>
+</body>
+</html>
