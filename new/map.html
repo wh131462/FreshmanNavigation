@@ -39,15 +39,16 @@
 	<script type="text/javascript">
 		function select(option){
 			var map=document.getElementById("map");
-			map.src="../images/"+option.name+".png";
-			console.log("切换成功");
+			var imageSrc="../images/"+option.value+".png";
+			map.src=imageSrc;
+			console.log(imageSrc+"切换成功");
 		}
 	</script>
 	<div class="select">
-			<select name="map">
-				<option onfocus="select(this)" value="广科大-东环校区"><a href="javascript:void(0);" name="广科大-东环校区">广西科技大学-东环校区</a></option>
-				<option onfocus="select(this)" value="广科大-柳石校区"><a href="javascript:void(0);" name="广科大-柳石校区">广西科技大学-柳石校区</a></option>
-				<option onfocus="select(this)" value="广科大-柳东校区"><a href="javascript:void(0);" name="广科大-柳东校区">广西科技大学-柳东校区</a></option>
+			<select name="map" onfocus="select(this)">
+				<option value="广科大-东环校区">广西科技大学-东环校区</option>
+				<option value="广科大-柳石校区">广西科技大学-柳石校区</option>
+				<option value="广科大-柳东校区">广西科技大学-柳东校区</option>
 			</select>
 	</div>
 	<div class="map">
