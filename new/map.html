@@ -13,8 +13,25 @@
 	}
 	.select{
 		position:fixed;
-		top: 10px;
-		left: 15px;
+		top: 5px;
+		left: 20px;
+	}
+	.select ul{
+		padding: 0;
+	}
+	.select li{
+		list-style: none;
+		padding: 5px;
+		background: rgba(0,0,255,0.1);
+		border:rgba(0,0,255,0.3) solid 1px;
+		border-radius: 5px;
+	}
+	.select a{
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	.select li:hover,.select a:hover{
+		background: rgba(0,0,255,0.2);
 	}
 	.map{
 		background:rgba(255, 125, 25, 0.1);
@@ -57,10 +74,10 @@
 	<script type="text/javascript">
 		function select(option){
 			var map=document.getElementById("map");
-			var imageSrc="../images/"+option.value+".png";
+			var imageSrc="../images/"+option.name+".png";
 			map.src=imageSrc;
 			console.log(imageSrc+"切换成功");
-			if(option.value=="广科大-柳石校区"){
+			if(option.name=="广科大-柳石校区"){
 				alert("由于特殊原因，无卫星图，敬请谅解。");
 			}
 		}
@@ -83,11 +100,11 @@
 		}
 	</script>
 	<div class="select">
-			<select name="map" onfocusout="select(this)">
-				<option value="广科大-东环校区">广西科技大学-东环校区</option>
-				<option value="广科大-柳石校区">广西科技大学-柳石校区</option>
-				<option value="广科大-柳东校区">广西科技大学-柳东校区</option>
-			</select>
+		<ul>
+			<li><a href="javascript:void(0);" onclick="select(this)" name="广科大-东环校区">广西科技大学-东环校区</a></li>
+			<li><a href="javascript:void(0);" onclick="select(this)" name="广科大-柳石校区">广西科技大学-柳石校区</a></li>
+			<li><a href="javascript:void(0);" onclick="select(this)" name="广科大-柳东校区">广西科技大学-柳东校区</a></li>
+		</ul>
 	</div>
 	<div class="map">
 		<div class="btnContent">
