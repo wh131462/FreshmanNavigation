@@ -14,20 +14,35 @@
 		left: 15px;
 	}
 	.map{
-		background: #626481;
+		background:rgba(255, 125, 25, 0.1);
 	}
 	.map img{
 		width: 100%;
 		margin: 0;
 		padding: 0;
 	}
+	.btnContent{
+		top: 10px;
+		right: 0;
+		position:fixed;
+	}
+	.btn{
+		position: relative;
+		border: rgba(12,25,200,0.6) solid 1px;
+		border-radius: 5px;
+		background: rgba(12,25,200,0.1);
+		color: #FFF;
+		font-weight: bold;
+		padding: 5px 20px;
+	}
 	.foot {
 	height: 40px;
 	line-height: 40px;
 	width: 100%;
 	text-align: center;
-	position: relative;
-	background: #445169;
+	position:fixed;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.1);
 	color: rgba(25, 150, 255, 0.6);
 	}
 	.foot p{
@@ -42,16 +57,42 @@
 			var imageSrc="../images/"+option.value+".png";
 			map.src=imageSrc;
 			console.log(imageSrc+"切换成功");
+			if(option.value=="广科大-柳石校区"){
+				alert("由于特殊原因，无卫星图，敬请谅解。");
+			}
+		}
+		function large(){
+			var map=document.getElementById("map");
+			var width=map.clientWidth*2;
+			console.log(width);
+			map.style.width=width+"px";
+			
+		}
+		function small(){
+			var map=document.getElementById("map");
+			var width=map.clientWidth/2;
+			console.log(width);
+			map.style.width=width+"px";
+		}
+		function re0(){
+			var map=document.getElementById("map");
+			map.style.width=100+"%";
 		}
 	</script>
 	<div class="select">
-			<select name="map" onfocus="select(this)">
+			<select name="map" onfocusout="select(this)">
 				<option value="广科大-东环校区">广西科技大学-东环校区</option>
 				<option value="广科大-柳石校区">广西科技大学-柳石校区</option>
 				<option value="广科大-柳东校区">广西科技大学-柳东校区</option>
 			</select>
 	</div>
 	<div class="map">
+		<div class="btnContent">
+			<input type="button" class="btn" onclick="large()" value="放大" />
+		<input type="button" class="btn" onclick="small()" value="缩小" />
+		<input type="button" class="btn" onclick="re0()" value="复位" />
+		</div>
+		
 		<img src="../images/广科大-东环校区.png" id="map">
 	</div>
 	<div class="foot">
@@ -60,5 +101,13 @@
 				 style="color: rgba(0,150,255,0.6);text-decoration:none; ">联系我们</a></p>
 		</small>
 	</div>
+	<script type="text/javascript">
+		function initMapHeight(){
+			var minwidth=document.documentElement.clientWidth;
+			map.style.minWidth=minwidth+"px";
+			console.log("初始化完成；"+minwidth);
+		}
+		initMapHeight();
+	</script>
 </body>
 </html>
