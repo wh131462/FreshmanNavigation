@@ -3,17 +3,19 @@
  */
 	body{
 		margin: 0;
+		/* 使字体更加圆滑 */
+		-webkit-font-smoothing:antialiased;
 	}
 	.top{
 		margin-top: 30px;
 		right: 30px;
-		z-index: 999;/*浮动在最上层*/
+		z-index: 2;/*浮动在最上层*/
 		position: absolute;
 	}
 	.top>ul>li{
 		display: inline-block;
-		color: #662299;/*设置列表中所有内容的字体颜色*/
-		background: #FF6622;
+		color: #FFFFFF;/*设置列表中所有内容的字体颜色*/
+		background:rgba(0,102,255,0.2);
 		border: #666666 solid 1px;
 		border-radius: 5px;
 		transform: skew(30deg);
@@ -26,46 +28,42 @@
 		text-decoration: none;	
 	}
 	.top li:hover{
-		background:rgba(255,102,34,0.1);
-	}
-	/* 头部导航栏下的二级导航栏 */
-	#secondList{
-		display: none;
-		transform: skewX(-30deg);
-		list-style: none;
-		position:absolute;
-		right: 90px;
-	}
-	/* 对二级列表重新设置样式 */
-	#secondList li{
-		display:inline-block; 
-		border: #666666 solid 1px;
-		border-radius:10px;
-		padding: 0 40px;
-		margin-top:5px;
-	}
-	#secondList a{
-		text-decoration:none;
+		background:rgba(0,102,255,0.1);
 	}
 	.banner{
 		width: 100%;
 		margin: 0 auto;
 		min-height: 720px;
 		background: #F6666F;
+		background-size: 100%;
+		overflow: hidden;
 	}
 	.video{
 		margin: 0 auto;
-		width:80%;
-		height:60%;
-		top: 20%;
+		width: 40%;
+		height: 70%;
+		top: 15%;
 		left: 50%;/*居中处理*/
-		margin-left: -40%;
+		margin-left: -20%;
 		position: absolute;
 	}
 	#video{
 		width: 100%;
 		height: 100%;
 	}
+	#toggle{
+		/* 位置设置 */
+		left: 5px;
+		top: 5px;
+		position: absolute;
+		
+		/* 样式设置 */
+		border: #007BFF solid 1px;
+		background: #0078E7;
+		color: #FFFFFF;
+
+	}
+	
 	.foot {
 	height: 40px;
 	width: 100%;
@@ -75,9 +73,9 @@
 	
 	}
 	
-	/* 测试代码 */
+	/* affix必要代码 */
 	 ul.nav-tabs{
-        width: 140px;
+        width: 120px;
         margin-top: 20px;
         border-radius: 4px;
         border: 1px solid #ddd;
@@ -85,20 +83,22 @@
     }
     ul.nav-tabs li{
         margin: 0;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid #DDD;
     }
     ul.nav-tabs li:first-child{
         border-top: none;
     }
     ul.nav-tabs li a{
         margin: 0;
+		text-align: center;
         padding: 8px 16px;
         border-radius: 0;
     }
     ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
         color: #fff;
-        background: #0088cc;
-        border: 1px solid #0088cc;
+		text-align: center;
+        background: #FF88cc;
+        border: 1px solid #FF88cc;
     }
     ul.nav-tabs li:first-child a{
         border-radius: 4px 4px 0 0;
@@ -110,3 +110,17 @@
         top: 30px; /* Set the top position of pinned element */
     }
 	/* end */
+	
+	#down{
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		bottom: 0;
+		left: 15px;
+		margin-left: 50%;
+	}
+	#down img{
+		width:100%;
+		height:100%;
+	}

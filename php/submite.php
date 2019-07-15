@@ -4,6 +4,7 @@
 <meta name="Description" content="广科大易班招新,个人信息上传"/>
 <meta charset="utf-8">
 <title>上传信息</title>
+<link rel="shortcut icon" href="../images/logo.ico">
 <style type="text/css">
 	body{
 		margin:0;

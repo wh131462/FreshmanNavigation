@@ -16,3 +16,19 @@ function autoHeight(){
 	banner.style.height=Height+"px";
 	console.log("Autoheight success");
 }
+// 切换背景图
+function toggle(){
+	var banner=document.getElementsByClassName("banner")[0];
+	console.log(banner.style.backgroundImage);
+	if(banner.style.backgroundImage=="url(\"images/background0.png\")"){
+		banner.style.backgroundImage="url(\"images/background"+1+".png\")";
+	}else{		
+		banner.style.backgroundImage="url(\"images/background"+0+".png\")";
+	}	
+}
+// a标跳过渡动画
+$(function(){
+    $('a').click(function(){
+        $('html,body').animate({scrollTop: ($($(this).attr('href')).offset().top  )},1000);
+    });
+});
