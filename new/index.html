@@ -13,63 +13,67 @@
 <meta charset="utf-8">
 
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
- 
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"></script>
- 
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
- 
-
+<script src="../js/jquery-3.2.1.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link href="css/style.css" rel="stylesheet" type="text/css" />
-<link href="css/iscroll.css" rel="stylesheet" type="text/css" />
-<style>
-.banner img {width: 100%;}
-</style>
-
-<script type="text/javascript" src="js/iscroll.js"></script>
-<script type="text/javascript">
-var myScroll;
-function loaded(){
-	myScroll = new iScroll('wrapper', {
-		snap: true,
-		momentum: false,
-		hScrollbar: false,
-		onScrollEnd: function () {
-			document.querySelector('#indicator > li.active').className = '';
-			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
-		}
-	});
-}
-document.addEventListener('DOMContentLoaded', loaded, false);
-</script>
-
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-<div class="banner">
-
-	<div id="wrapper">
-		<div id="scroller">
-			<ul id="thelist">
-				<li><p>一番桃李花开尽，惟有青青草色齐</p><a href="javascript:void(0)"><img src="images/3.jpg" /></a></li>
-				<li><p>生命，在于运动</p><a href="javascript:void(0)"><img src="images/4.jpg" /></a></li>
-				<li><p>天空没有翅膀的痕迹，而我已飞过</p><a href="javascript:void(0)"><img src="images/2.jpg" /></a></li>
-				<li><p>夜幕笼罩，月明如镜</p><a href="javascript:void(0)"><img src="images/1.jpg" /></a></li>
-			</ul>
+<div class="nav">
+	<ul>
+		<li><a href="">新生导航</a></li>
+		<li><a href="../index.html">首页</a></li>
+	</ul>
+</div>
+<div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<p>广科大东环校区的西门</p>
+			<img src="images/1.jpg" alt="科大西门">
+		</div>
+		<div class="item">
+			<p>广科大东环校区的鹿鸣湖</p>
+			<img src="images/2.jpg" alt="鹿鸣湖">
+		</div>
+		<div class="item">
+			<p>广科大东环校区的图书馆</p>
+			<img src="images/3.jpg" alt="图书馆">
+		</div>
+		<div class="item">
+			<p>广科大螺蛳山的小亭子</p>
+			<img src="images/4.jpg" alt="螺丝山小亭">
+		</div>
+		<div class="item">
+			<p>广科大东环校区南门</p>
+			<img src="images/5.jpg" alt="科大南门">
+		</div>
+		<div class="item">
+			<p>广科大柳东校区南门</p>
+			<img src="images/6.jpg" alt="柳东南门">
+		</div>
+		<div class="item">
+			<p>广科大柳石校区教学楼</p>
+			<img src="images/7.jpg" alt="柳石教学楼">
 		</div>
 	</div>
-
-	<div id="nav">
-		<ul id="indicator">
-			<li class="active" ></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-	</div>
-	
-</div>
-
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div> 
 <ul class="mainmenu">
    <li><a href="" ><b><img src="images/tb01.png" /></b><span>柳州简介</span></a></li>
   <li><a href="" ><b><img src="images/tb02.png" /></b><span>科大简介</span></a></li>
@@ -84,29 +88,6 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 <li><a href="https://720yun.com/t/3d2jOrkwOk8?scene_id=4253306" ><b><img src="images/tb13.png" /></b><span>科大全景图</span></a></li>
 <li><a href="map.html" ><b><img src="images/tb08.png" /></b><span>科大平面图</span></a></li>
 </ul>
-
-
-<script type="text/javascript">
-var count = document.getElementById("thelist").getElementsByTagName("img").length;	
-
-var count2 = document.getElementsByClassName("menuimg").length;
-for(i=0;i<count;i++){
-	document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
-}
-document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
-
-setInterval(function(){
-	myScroll.scrollToPage('next', 0,400,count);
-},3500 );
-
-window.onresize = function(){ 
-	for(i=0;i<count;i++){
-		document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
-	}
-	document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
-} 
-</script>
-
 <div class="foot">
 			<small>
 				<p>Copyright &copy; 2019 GXUST-YiBanTechGroup |All Rights Reserved|<a href="mailto:TechGroup@gxust-yiban.com?Subject=subinfo&body=hello"

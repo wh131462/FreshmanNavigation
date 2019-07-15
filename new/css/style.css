@@ -21,7 +21,7 @@ body .mainmenu li a img{ margin: 15px auto 15px;
 width: 50px;
 height: 50px;}
 body .mainmenu li a span{ display:block; height:30px; line-height:30px;background-color:#FFF; color: #999; font-size:14px; }
-
+/*菜单项目卡背景色*/
 body .mainmenu li:nth-child(8n+1) {background-color:#36A1DB}
 body .mainmenu li:nth-child(8n+2) {background-color:#678ce1}
 body .mainmenu li:nth-child(8n+3) {background-color:#8c67df}
@@ -31,6 +31,40 @@ body .mainmenu li:nth-child(8n+6) {background-color:#f3b613}
 body .mainmenu li:nth-child(8n+7) {background-color:#ff8a4a}
 body .mainmenu li:nth-child(8n+8) {background-color:#fc5366}
 
+.nav{
+	height: 30px;
+	line-height: 30px;
+	background:#FFFAFA;
+}
+.nav li{
+	display: inline-block;
+	float: right;
+	font-size: 16px;
+	border: rgba(220,230,205,0.9) solid 1px;
+	
+}
+.nav li:hover{
+	border: rgba(0,0,205,0.9) solid 1px;
+	background:  rgba(0,0,205,0.1);
+}
+.nav a{
+	padding: 0 5px;
+	text-decoration: none;
+}
+
+/* 轮播图项目 */
+.item p{
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+	height: 30px;
+	background:rgba(255,250,250,0.6);
+	color: rgba(0,0,255,0.6);
+	text-align: center;
+	top:5px;
+	position: absolute;
+}
+
 .foot {
 	margin-top: 30px;
 	height: 40px;
@@ -38,4 +72,5 @@ body .mainmenu li:nth-child(8n+8) {background-color:#fc5366}
 	text-align: center;
 	position: relative;
 	color: rgba(0, 150, 255, 0.6);
+	background:#FFFAFA;
 }
