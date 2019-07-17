@@ -1,0 +1,45 @@
+/* css for phone */
+*{
+	margin: 0;
+	padding: 0;
+}
+.nav{
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+	background: #FFFFFF;
+	top: 0px;
+	position: fixed;
+	z-index: 2;
+}
+.nav li{
+	display: inline-block;
+	width: 23%;
+	height: 30px;
+	line-height: 30px;
+	border: #0078E7 solid 1px;
+	border-radius: 5px;
+	background: #0078E7;
+	
+	position: relative;
+}
+.nav a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.main{
+	margin-top: 50px;
+	position: relative;
+	margin: 50px 20px 0;
+	z-index: -1;
+}
+
+.foot {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	color: rgba(0, 150, 255, 0.6);
+	
+	}
