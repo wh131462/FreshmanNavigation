@@ -15,7 +15,7 @@
 	.top>ul>li{
 		display: inline-block;
 		color: #FFFFFF;/*设置列表中所有内容的字体颜色*/
-		background:rgba(0,102,255,0.2);
+		background:rgba(0,102,255,0.1);
 		border: #666666 solid 1px;
 		border-radius: 5px;
 		transform: skew(30deg);
@@ -28,7 +28,7 @@
 		text-decoration: none;	
 	}
 	.top li:hover{
-		background:rgba(0,102,255,0.1);
+		background:rgba(0,102,255,0.5);
 	}
 	.banner{
 		width: 100%;
@@ -36,6 +36,7 @@
 		min-height: 720px;
 		background: #F6666F;
 		background-size: 100%;
+		background-repeat: no-repeat;
 		overflow: hidden;
 	}
 	.video{
