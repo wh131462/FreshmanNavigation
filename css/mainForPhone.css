@@ -5,15 +5,36 @@
 }
 body{
 	background: #FEFEFE;
+	overflow-scrolling: touch;
 }
+.top{
+	height: 30px;
+	line-height: 30px;
+	background:#FFFAFA;
+}
+.top li{
+	display: inline-block;
+	float: right;
+	font-size: 16px;
+	border: rgba(220,230,205,0.9) solid 1px;
+	
+}
+.top li:hover{
+	border: rgba(0,0,205,0.9) solid 1px;
+	background:  rgba(0,0,205,0.1);
+}
+.top a{
+	padding: 0 5px;
+	text-decoration: none;
+}
+
 .nav{
 	height: 40px;
 	line-height: 40px;
 	width: 100%;
 	text-align: center;
 	background: #FEFEFE;/*要与背景色相同*/
-	top: 0px;
-	position: fixed;
+	position:relative;
 	z-index: 2;
 }
 .nav li{
@@ -24,7 +45,6 @@ body{
 	border: #0078E7 solid 1px;
 	border-radius: 5px;
 	background: #0078E7;
-	
 	position: relative;
 }
 .nav li:hover{
@@ -35,14 +55,22 @@ body{
 	text-decoration: none;
 }
 .main{
-	margin-top: 50px;
 	position: relative;
-	margin: 50px 20px 0;
+	margin: 0px 20px 0;
 	z-index: 1;
 }
-#video{
+.video{
 	width: 100%;
-	margin: 10px 5px;
+	height: auto;
+	margin: 0 auto;
+	position:relative;
+}
+#video{
+	width: 96%;
+	margin:10px 0;
+	margin-left: 50%;
+	left:-48%;/*居中*/
+	position: relative;
 	z-index: 9;
 }
 .foot {
