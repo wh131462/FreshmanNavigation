@@ -3,12 +3,15 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	background: #FEFEFE;
+}
 .nav{
 	height: 40px;
 	line-height: 40px;
 	width: 100%;
 	text-align: center;
-	background: #FFFFFF;
+	background: #FEFEFE;/*要与背景色相同*/
 	top: 0px;
 	position: fixed;
 	z-index: 2;
@@ -25,7 +28,7 @@
 	position: relative;
 }
 .nav li:hover{
-	background: #000000;
+	background: #999999;
 }
 .nav a{
 	color: #FFFFFF;
@@ -48,5 +51,4 @@
 	text-align: center;
 	position: relative;
 	color: rgba(0, 150, 255, 0.6);
-	
-	}
+}
