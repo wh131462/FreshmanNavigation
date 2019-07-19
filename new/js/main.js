@@ -39,10 +39,10 @@ function deviceInfo(a){
 	console.log(device);
 	if(device.indexOf('Android')>-1||device.indexOf('Linux')>-1||device.indexOf('iPhone')>-1||device.indexOf('iPad')>-1){
 		console.log("欢迎访问手机端页面；");
-		a.href="indexForPhone.html";
+		a.href="../indexForPhone.html";
 	}else if(device.indexOf('Windows')>-1){
 		console.log("欢迎访问电脑端页面；");
-		a.href="index.html";
+		a.href="../index.html";
 	}
 }
 deviceInfo();
