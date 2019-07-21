@@ -45,4 +45,15 @@ function deviceInfo(a){
 		a.href="index.html";
 	}
 }
-deviceInfo();
+function autoInex(){
+	var device=navigator.userAgent;
+	console.log(device);
+	if(device.indexOf('Android')>-1||device.indexOf('Linux')>-1||device.indexOf('iPhone')>-1||device.indexOf('iPad')>-1){
+		console.log("欢迎访问手机端页面；");
+		window.location.replace("indexForPhone.html");
+	}else if(device.indexOf('Windows')>-1){
+		console.log("欢迎访问电脑端页面；");
+		//window.location.replace("index.html");
+	}
+}
+autoInex();
