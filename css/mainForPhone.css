@@ -6,6 +6,7 @@
 body{
 	background:#FEFEFE;
 	overflow-x:hidden;
+	touch-action: cross-slide-y;
 	/* overflow-scrolling: touch; */
 }
 .top{

@@ -9,50 +9,90 @@
 		<link rel="shortcut icon" href="images/logo.ico">
 
         <style type="text/css">
-            body {
-                margin: 0;
-            }
-			
-			#bg{
-				width: 100%;
-				z-index: -1;
-				position:relative;
+			@media screen {
+				body {
+					margin: 0;
+				}
+				
+				#bg{
+					width: 100%;
+					z-index: -1;
+					position:relative;
+				}
+				.top {
+					height: 30px;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+
+				.top a {
+					float: right;
+					height: 28px;
+					line-height: 28px;
+					padding: 0 20px;
+					font-size: 30px;
+					font-weight: bolder;
+					color:#268e8f;
+					margin: 20px 15px 0px 0;
+					text-shadow: #268e8f 1px 1px 1px;
+					text-decoration: none;
+				}
+
+				.main {
+					text-align: center;
+					width: 60%;
+					height:auto;
+					margin-top: 300px;
+					margin: 0px auto;
+					position:relative;
+				}
+
+				.main h1 {
+					margin: 0;
+					padding: 10px;
+					color: rgba(0, 30, 255, 0.3);
+				}
 			}
-            .top {
-                height: 30px;
-				position: absolute;
-				top: 0;
-				right: 0;
-            }
-
-            .top a {
-				float: right;
-                height: 28px;
-				line-height: 28px;
-                padding: 0 20px;
-                font-size: 30px;
-				font-weight: bolder;
-                color:#268e8f;
-				margin: 20px 15px 0px 0;
-                text-shadow: #268e8f 1px 1px 1px;
-                text-decoration: none;
-            }
-
-            .main {
-                text-align: center;
-                width: 60%;
-                min-width: 560px;
-                height:auto;
-				margin-top: 300px;
-                margin: 0px auto;
-				position:relative;
-            }
-
-            .main h1 {
-                margin: 0;
-                padding: 10px;
-                color: rgba(0, 30, 255, 0.3);
-            }
+           @media all and (min-width: 300px) and (max-width:800px) {
+           		body {
+           		margin: 0;
+				padding: 0;
+           	}
+           	
+           	#bg{
+           		width: 100%;
+           		z-index: -1;
+           		position:relative;
+           	}
+           	.top {
+           		height: 30px;
+           		position: absolute;
+           		top: 0;
+           		right: 0;
+           	}
+           	
+           	.top a {
+           		float: right;
+           		height: 28px;
+           		line-height: 28px;
+           		padding: 0;
+           		font-size: 16px;/*字体大小*/
+           		font-weight: bolder;
+           		color:#268e8f;
+           		margin: 20px 10px 0px 0;
+           		text-shadow: #268e8f 1px 1px 1px;
+           		text-decoration: none;
+           	}
+			.main{}
+           	.main h1 {
+           		
+           	}
+			fieldset{
+				width: 30%;
+			}
+		
+           }
 
         </style>
         <!-- 引入pure -->
@@ -75,11 +115,11 @@
                         <input type="text" name="name" value="">
                     </div>
                     <div class="pure-control-group">
-                        <span>性别:</span>
-                        <label for="sex" class="pure-radio">
+                        <span></span>
+                        <label for="sex" class="pure-radio">性别:</label>
                             <input type="radio" name="sex" checked value="Male" />男
 							<input type="radio" name="sex" value="Female" />女
-                        </label>
+                        
                     </div>
                     <div class="pure-control-group">
                         <label for="school">学院:</label><input type="text" name="school" value="" />
@@ -133,11 +173,9 @@
                         </select>
                     </div>
                     <div class="pure-control-group">
-                        <span>是否愿意服从调剂:</span>
-                       <label for="yorn" class="pure-radio">
+                       <label for="yorn" class="pure-radio">是否愿意服从调剂:</label>
                            <input type="radio" name="yorn" checked value="yes" />是
 						   <input type="radio" name="yorn" id="female" value="no" />否
-                       </label>
                     </div>
                     <div class="pure-control-group">
                         <span>请上传本人一寸照:</span>
