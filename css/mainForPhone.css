@@ -4,8 +4,9 @@
 	padding: 0;
 }
 body{
-	background: #FEFEFE;
-	overflow-scrolling: touch;
+	background:#FEFEFE;
+	overflow-x:hidden;
+	/* overflow-scrolling: touch; */
 }
 .top{
 	height: 30px;
@@ -56,8 +57,22 @@ body{
 }
 .main{
 	position: relative;
-	margin: 0px 20px 0;
-	z-index: 1;
+	margin:10px 20px 0;
+}
+.main h2{
+	background:#31AAB9;
+	text-shadow: #FFFFFF 1px 1px;
+	color:#FFFFFF;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	padding: 0;	
+}
+.main p{
+	text-indent: 2em;
+	margin: 5px 0;
+	color: #62ACDF;
+	font-family:"microsoft yahei";
 }
 .video{
 	width: 100%;
