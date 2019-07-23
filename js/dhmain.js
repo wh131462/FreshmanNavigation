@@ -16,16 +16,6 @@ function autoHeight(){
 	banner.style.height=Height+"px";
 	console.log("Autoheight success");
 }
-// 切换背景图
-function toggle(){
-	var banner=document.getElementsByClassName("banner")[0];
-	console.log(banner.style.backgroundImage);
-	if(banner.style.backgroundImage=="url(\"images/background0.png\")"){
-		banner.style.backgroundImage="url(\"images/background"+1+".png\")";
-	}else{		
-		banner.style.backgroundImage="url(\"images/background"+0+".png\")";
-	}	
-}
 // a标跳过渡动画
 $(function(){
     $('a').click(function(){
@@ -39,10 +29,10 @@ function deviceInfo(a){
 	console.log(device);
 	if(device.indexOf('Android')>-1||device.indexOf('Linux')>-1||device.indexOf('iPhone')>-1||device.indexOf('iPad')>-1){
 		console.log("欢迎访问手机端页面；");
-		a.href="../indexForPhone.html";
+		a.href="indexForPhone.html";
 	}else if(device.indexOf('Windows')>-1){
 		console.log("欢迎访问电脑端页面；");
-		a.href="../index.html";
+		a.href="index.html";
 	}
 }
 deviceInfo();

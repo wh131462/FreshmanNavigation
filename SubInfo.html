@@ -84,12 +84,14 @@
            		text-shadow: #268e8f 1px 1px 1px;
            		text-decoration: none;
            	}
-			.main{}
+			.main{
+				width: 100%;
+			}
            	.main h1 {
            		
            	}
 			fieldset{
-				width: 30%;
+				width: 100%;
 			}
 		
            }
@@ -100,14 +102,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-		<img src="images/baomingtop.png" id="bg">
+		
+        <div class="main">
+			<img src="images/baomingtop.png" id="bg">
         <!-- 导航栏 -->
         <div class="top">
 			<a href="">关于我们</a>
             <a href="index.html">首 页</a>
         </div>
         
-        <div class="main">
             <form action="php/submite.php" method="post" enctype="multipart/form-data" class="pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
@@ -186,6 +189,7 @@
                     </div>
                 </fieldset>
             </form>
+			<img src="images/baomingbottom.png" id="bg">
         </div>
         <!-- <div class="foot">
             <small>
@@ -193,6 +197,6 @@
                         style="color: rgba(0,150,255,0.6);text-decoration:none; ">联系我们</a></p>
             </small>
         </div> -->
-		<img src="images/baomingbottom.png" id="bg">
+		
     </body>
 </html>
