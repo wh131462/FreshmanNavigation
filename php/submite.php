@@ -80,7 +80,7 @@ $sql="INSERT INTO memInfo(name,sex,school,studyId,QQ,tel,username,last,interest,
 	if($conn->query($sql)==true){
 		echo " 信息上传成功~<a href='../index.html'>点此返回首页</a>";
 	}else{
-		echo " 数据传入数据库失败";
+		echo " 数据传入数据库失败~><a href='../SubInfo.html'>点此返回重新上传</a>";
 	}
 
 }else{
